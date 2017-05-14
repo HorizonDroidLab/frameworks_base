@@ -27,6 +27,8 @@ import androidx.annotation.NonNull;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.internal.widget.ViewClippingUtil;
 import com.android.systemui.R;
+import com.android.systemui.dagger.qualifiers.RootView;
+import com.android.systemui.horizon.logo.LogoImage;
 import com.android.systemui.plugins.DarkIconDispatcher;
 import com.android.systemui.plugins.statusbar.StatusBarStateController;
 import com.android.systemui.shade.ShadeHeadsUpTracker;
@@ -88,6 +90,8 @@ public class HeadsUpAppearanceController extends ViewController<HeadsUpStatusBar
     private final View mClockView;
     private final Optional<View> mOperatorNameViewOptional;
 
+    private final LogoImage mLeftLogo;
+
     @VisibleForTesting
     float mExpandedHeight;
     @VisibleForTesting
@@ -121,7 +125,8 @@ public class HeadsUpAppearanceController extends ViewController<HeadsUpStatusBar
             NotificationRoundnessManager notificationRoundnessManager,
             HeadsUpStatusBarView headsUpStatusBarView,
             Clock clockView,
-            @Named(OPERATOR_NAME_FRAME_VIEW) Optional<View> operatorNameViewOptional) {
+            @Named(OPERATOR_NAME_FRAME_VIEW) Optional<View> operatorNameViewOptional,
+            @RootView PhoneStatusBarView statusBarView) {
         super(headsUpStatusBarView);
         mNotificationIconAreaController = notificationIconAreaController;
         mNotificationRoundnessManager = notificationRoundnessManager;
@@ -142,6 +147,7 @@ public class HeadsUpAppearanceController extends ViewController<HeadsUpStatusBar
         mClockView = clockView;
         mOperatorNameViewOptional = operatorNameViewOptional;
         mDarkIconDispatcher = darkIconDispatcher;
+        mLeftLogo = statusBarView.findViewById(R.id.statusbar_logo);
 
         mView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
             @Override
@@ -244,7 +250,11 @@ public class HeadsUpAppearanceController extends ViewController<HeadsUpStatusBar
                 show(mView);
                 hide(mClockView, View.INVISIBLE);
                 mOperatorNameViewOptional.ifPresent(view -> hide(view, View.INVISIBLE));
+                if (mLeftLogo.getVisibility() != View.GONE)
+                    mLeftLogo.setVisibility(View.INVISIBLE);
             } else {
+                if (mLeftLogo.getVisibility() != View.GONE)
+                    mLeftLogo.setVisibility(View.VISIBLE);
                 show(mClockView);
                 mOperatorNameViewOptional.ifPresent(this::show);
                 hide(mView, View.GONE, () -> {
