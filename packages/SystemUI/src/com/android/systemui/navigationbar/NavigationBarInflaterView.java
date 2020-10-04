@@ -115,6 +115,17 @@ public class NavigationBarInflaterView extends FrameLayout
 
     private final Listener mListener;
 
+    private static final String KEY_NAVIGATION_HINT =
+            "customsystem:" + Settings.System.NAVIGATION_BAR_HINT;
+    private static final String OVERLAY_NAVIGATION_HIDE_HINT =
+            "org.pixelexperience.overlay.navbar.nohint";
+
+    private static final String KEY_NAVIGATION_SPACE =
+            "system:" + Settings.System.NAVIGATION_BAR_IME_SPACE;
+
+    private static final String GESTURE_NAVBAR_LENGTH_MODE =
+            "system:" + Settings.System.GESTURE_NAVBAR_LENGTH_MODE;
+
     protected LayoutInflater mLayoutInflater;
     protected LayoutInflater mLandscapeInflater;
 
@@ -136,6 +147,12 @@ public class NavigationBarInflaterView extends FrameLayout
 
     private boolean mInverseLayout;
     private boolean mIsHintDisabled;
+
+    private boolean mCompactLayout;
+    private static AtomicReference<Boolean> mIsHintEnabledRef;
+
+    private boolean mIsAttachedToWindow;
+    private int mHomeHandleWidthMode = 0;
 
     public NavigationBarInflaterView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -195,6 +212,9 @@ public class NavigationBarInflaterView extends FrameLayout
         super.onAttachedToWindow();
         Dependency.get(TunerService.class).addTunable(this, NAV_BAR_INVERSE);
         Dependency.get(TunerService.class).addTunable(this, KEY_NAVIGATION_HINT);
+        Dependency.get(TunerService.class).addTunable(this, KEY_NAVIGATION_SPACE);
+        Dependency.get(TunerService.class).addTunable(this, GESTURE_NAVBAR_LENGTH_MODE);
+        mIsAttachedToWindow = true;
     }
 
     @Override
@@ -209,6 +229,15 @@ public class NavigationBarInflaterView extends FrameLayout
         if (NAV_BAR_INVERSE.equals(key)) {
             mInverseLayout = TunerService.parseIntegerSwitch(newValue, false);
             updateLayoutInversion();
+        }else if(NAV_BAR_COMPACT.equals(key)){
+            boolean compactLayout = TunerService.parseIntegerSwitch(newValue, false);
+            if (compactLayout != mCompactLayout){
+                mCompactLayout = compactLayout;
+                setNavigationBarLayout(getDefaultLayout());
+            }
+        } else if (GESTURE_NAVBAR_LENGTH_MODE.equals(key)) {
+            mHomeHandleWidthMode = TunerService.parseInteger(newValue, 1);
+            onLikelyDefaultLayoutChange();
         } else if (KEY_NAVIGATION_HINT.equals(key)) {
             mIsHintDisabled = TunerService.parseIntegerSwitch(newValue, false);
             updateHint();
@@ -481,6 +510,20 @@ public class NavigationBarInflaterView extends FrameLayout
             v = inflater.inflate(R.layout.contextual, parent, false);
         } else if (HOME_HANDLE.equals(button)) {
             v = inflater.inflate(R.layout.home_handle, parent, false);
+            final ViewGroup.LayoutParams lp = v.getLayoutParams();
+            if (mHomeHandleWidthMode == 0) {
+                lp.width = getResources().getDimensionPixelSize(
+                    R.dimen.navigation_home_handle_width_short);
+                v.setLayoutParams(lp);
+            } else if (mHomeHandleWidthMode == 1) {
+                lp.width = getResources().getDimensionPixelSize(
+                    R.dimen.navigation_home_handle_width);
+                v.setLayoutParams(lp);
+            } else if (mHomeHandleWidthMode == 2) {
+                lp.width = getResources().getDimensionPixelSize(
+                    R.dimen.navigation_home_handle_width_long);
+                v.setLayoutParams(lp);
+            }
         } else if (IME_SWITCHER.equals(button)) {
             v = inflater.inflate(R.layout.ime_switcher, parent, false);
         } else if (button.startsWith(KEY)) {
