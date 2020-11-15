@@ -66,7 +66,6 @@ public interface CentralSurfaces extends Dumpable, LifecycleOwner {
     boolean DEBUG_CAMERA_LIFT = false;
     boolean DEBUG_WINDOW_STATE = false;
     boolean DEBUG_WAKEUP_DELAY = Compile.IS_DEBUG;
-    boolean SHOW_LOCKSCREEN_MEDIA_ARTWORK = true;
     String ACTION_FAKE_ARTWORK = "fake_artwork";
     int FADE_KEYGUARD_START_DELAY = 100;
     int FADE_KEYGUARD_DURATION = 300;
