@@ -12,4 +12,7 @@
     <!-- Settings Restart -->
     <string name="settings_restart_title">Settings restart required</string>
     <string name="settings_restart_message">For all changes to take effect, a Settings app restart is required. Restart Settings app now?</string>
+
+    <!-- Lock gesture -->
+    <string name="gesture_locked_warning">Swipe again to unlock gestures</string>
 </resources>
