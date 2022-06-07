@@ -104,5 +104,6 @@ public class SystemSettings {
         Settings.System.NETWORK_TRAFFIC_STATE,
         Settings.System.NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD,
         Settings.System.KEYGAURD_MEDIA_ART,
+        Settings.System.NAVIGATION_BAR_IME_SPACE,
     };
 }
