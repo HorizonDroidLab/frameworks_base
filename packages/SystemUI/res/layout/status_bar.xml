@@ -102,7 +102,7 @@
                     <com.android.systemui.statusbar.policy.Clock
                         android:id="@+id/clock"
                         android:layout_width="wrap_content"
-                        android:layout_height="@dimen/status_bar_system_icons_height"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:textAppearance="@style/TextAppearance.StatusBar.Clock"
                         android:singleLine="true"
@@ -173,6 +173,7 @@
     <com.android.keyguard.AlphaOptimizedLinearLayout
         android:id="@+id/centered_area"
         android:gravity="center"
+        android:layout_gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -181,7 +182,8 @@
             android:id="@+id/clock_center"
             android:textAppearance="@style/TextAppearance.StatusBar.Clock"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:singleLine="true"
             android:gravity="center"
             android:visibility="gone"
