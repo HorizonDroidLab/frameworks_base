@@ -47,7 +47,7 @@
             android:layout_gravity="center_vertical|end"
             android:paddingStart="@dimen/status_bar_clock_starting_padding"
             android:paddingEnd="@dimen/status_bar_clock_end_padding"
-            android:gravity="center_vertical"
+            android:gravity="center_vertical|end"
             android:scaleType="center"
             android:visibility="gone" />
 </LinearLayout>
