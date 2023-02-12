@@ -319,4 +319,6 @@
     <string name="config_batterymeterLandPowersavePathOrigami" translatable="false">@string/config_batterymeterLandPerimeterPathOrigami</string>
     <string name="config_batterymeterLandErrorPerimeterPathOrigami" translatable="false">@string/config_batterymeterLandPerimeterPathOrigami</string>
 
+    <!-- Boost Framework -->
+    <bool name="config_supportsBoostFramework">false</bool>
 </resources>

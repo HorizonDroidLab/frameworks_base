@@ -211,4 +211,7 @@
     <java-symbol type="string" name="config_batterymeterLandPowersavePathOrigami" />
     <java-symbol type="string" name="config_batterymeterLandErrorPerimeterPathOrigami" />
 
+   <!-- Boost Framework -->
+   <java-symbol type="bool" name="config_supportsBoostFramework" />
+
 </resources>
