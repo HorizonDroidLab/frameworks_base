@@ -16,11 +16,15 @@
 
 package com.android.systemui.media.controls.models.player
 
+import android.content.Context
+import android.content.ContentResolver
 import android.media.MediaMetadata
 import android.media.session.MediaController
 import android.media.session.PlaybackState
 import android.os.SystemClock
 import android.os.Trace
+import android.os.UserHandle
+import android.provider.Settings
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
@@ -81,10 +85,11 @@ private fun PlaybackState.computePosition(duration: Long): Long {
 class SeekBarViewModel
 @Inject
 constructor(
+    private val context: Context,
     @Background private val bgExecutor: RepeatableExecutor,
     private val falsingManager: FalsingManager,
 ) {
-    private var _data = Progress(false, false, false, false, null, 0)
+    private var _data = Progress(false, false, false, false, false, null, 0)
         set(value) {
             val enabledChanged = value.enabled != field.enabled
             field = value
@@ -227,19 +232,14 @@ constructor(
         val seekAvailable = ((playbackState?.actions ?: 0L) and PlaybackState.ACTION_SEEK_TO) != 0L
         val position = playbackState?.position?.toInt()
         val duration = mediaMetadata?.getLong(MediaMetadata.METADATA_KEY_DURATION)?.toInt() ?: 0
-        val playing =
-            NotificationMediaManager.isPlayingState(
-                playbackState?.state ?: PlaybackState.STATE_NONE
-            )
-        val enabled =
-            if (
-                playbackState == null ||
-                    playbackState?.getState() == PlaybackState.STATE_NONE ||
-                    (duration <= 0)
-            )
-                false
-            else true
-        _data = Progress(enabled, seekAvailable, playing, scrubbing, position, duration)
+        val playing = NotificationMediaManager
+                .isPlayingState(playbackState?.state ?: PlaybackState.STATE_NONE)
+        val enableSquiggle = Settings.Secure.getIntForUser(context.getContentResolver(),
+                Settings.Secure.SHOW_MEDIA_SQUIGGLE_ANIMATION, 0, UserHandle.USER_CURRENT) != 0
+        val enabled = if (playbackState == null ||
+                playbackState?.getState() == PlaybackState.STATE_NONE ||
+                (duration <= 0)) false else true
+        _data = Progress(enabled, seekAvailable, playing, scrubbing, enableSquiggle, position, duration)
         checkIfPollingNeeded()
     }
 
@@ -256,6 +256,7 @@ constructor(
                 seekAvailable = false,
                 playing = false,
                 scrubbing = false,
+                enableSquiggle = false,
                 elapsedTime = position,
                 duration = 100,
             )
@@ -550,6 +551,7 @@ constructor(
         val seekAvailable: Boolean,
         val playing: Boolean,
         val scrubbing: Boolean,
+        val enableSquiggle: Boolean,
         val elapsedTime: Int?,
         val duration: Int
     )
