@@ -7444,5 +7444,8 @@ message MetricsEvent {
 
     // CUSTOM Metrics
     CUSTOM = 2772;
+
+    // HorizonDroid
+    HORIZON = 4000;
   }
 }
