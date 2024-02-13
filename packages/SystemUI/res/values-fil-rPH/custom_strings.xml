@@ -18,15 +18,15 @@
     <string name="global_action_restart_bootloader">Ang Bootloader</string>
     <string name="global_action_restart_ui">Ang SystemUI</string>
     <!-- Text while recognizing face -->
-    <string name="face_unlock_recognizing">Recognizing face...</string>
+    <string name="face_unlock_recognizing">Kinikilala ang iyong mukha...</string>
     <!-- Custom QS tiles -->
     <!-- Ambient display QS tile -->
     <string name="quick_settings_ambient_display_label">Ambient display</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Ambient display off.</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Ambient display on.</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Patayin ang Ambient Display.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Buksan ang ambient.</string>
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">AOD</string>
-    <string name="quick_settings_aod_off_powersave_label">AOD off\nBattery saver</string>
+    <string name="quick_settings_aod_off_powersave_label">Naka off ang AOD\nbattery saver</string>
     <!-- Caffeine QS tile -->
     <string name="quick_settings_caffeine_label">Caffeine</string>
     <string name="accessibility_quick_settings_caffeine_off">Patayin ang Caffeine.</string>
@@ -54,8 +54,8 @@
     <string name="qs_data_switch_toast_1">Isang SIM lang nakapasok ngayon</string>
     <string name="qs_data_switch_text_1">SIM1</string>
     <string name="qs_data_switch_text_2">SIM2</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_changed_1">Mag palit ng data card sa SIM 1.</string>
+    <string name="qs_data_switch_changed_2">Mag palit ng data card sa SIM 2.</string>
     <!-- Title of statusbar tuner -->
     <string name="status_bar_icons">Mga icons sa Status Bar</string>
     <!-- Name of the VPN status bar icon. -->
@@ -63,9 +63,9 @@
     <!-- Name of the data saver status bar icon. -->
     <string name="status_bar_data_saver">Data saver</string>
     <!-- Name of the location status bar icon. -->
-    <string name="status_bar_location">Location</string>
+    <string name="status_bar_location">Lokasyon</string>
     <!-- Name of the microphone status bar icon. -->
-    <string name="status_bar_microphone">Microphone</string>
+    <string name="status_bar_microphone">Mikropono</string>
     <!-- Reader mode QS tile -->
     <string name="quick_settings_reading_mode">Reading mode</string>
     <string name="accessibility_quick_settings_reading_mode_on">Buhayin ang Reading mode.</string>
@@ -75,9 +75,9 @@
     <!-- Anti flicker QS tile -->
     <string name="quick_settings_anti_flicker">Iwasan ang pumipitik na screen</string>
     <!-- Bluetooth dialog -->
-    <string name="turn_on_bluetooth">Use Bluetooth</string>
+    <string name="turn_on_bluetooth">Gumamit ng Bluetooth</string>
     <string name="bluetooth_is_off">Patay ang Bluetooth</string>
-    <string name="tap_a_device_to_connect">Tap to connect or disconnect a device</string>
+    <string name="tap_a_device_to_connect">Pindutin upang mag konek o mag diskonekta ng device</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
     <plurals name="quick_settings_internet_hotspot_summary_num_devices">
         <item quantity="one">%d device connected</item>

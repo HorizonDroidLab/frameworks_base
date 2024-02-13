@@ -18,7 +18,7 @@
     <string name="global_action_restart_bootloader">Bootloader</string>
     <string name="global_action_restart_ui">Interfață sistem</string>
     <!-- Text while recognizing face -->
-    <string name="face_unlock_recognizing">Recognizing face...</string>
+    <string name="face_unlock_recognizing">Se recunoaște fața...</string>
     <!-- Custom QS tiles -->
     <!-- Ambient display QS tile -->
     <string name="quick_settings_ambient_display_label">Afișaj ambiental</string>
@@ -54,8 +54,8 @@
     <string name="qs_data_switch_toast_1">În prezent este introdusă o singură cartelă SIM</string>
     <string name="qs_data_switch_text_1">SIM 1</string>
     <string name="qs_data_switch_text_2">SIM 2</string>
-    <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
-    <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
+    <string name="qs_data_switch_changed_1">Utilizare SIM 1 pentru date mobile.</string>
+    <string name="qs_data_switch_changed_2">Utilizare SIM 2 pentru date mobile.</string>
     <!-- Title of statusbar tuner -->
     <string name="status_bar_icons">Pictograme bară de stare</string>
     <!-- Name of the VPN status bar icon. -->
@@ -75,27 +75,27 @@
     <!-- Anti flicker QS tile -->
     <string name="quick_settings_anti_flicker">Anti-pâlpâire</string>
     <!-- Bluetooth dialog -->
-    <string name="turn_on_bluetooth">Use Bluetooth</string>
+    <string name="turn_on_bluetooth">Folosiți Bluetooth</string>
     <string name="bluetooth_is_off">Bluetooth este dezactivat</string>
-    <string name="tap_a_device_to_connect">Tap to connect or disconnect a device</string>
+    <string name="tap_a_device_to_connect">Atingeți un dispozitiv pentru conectare sau deconectare</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
     <plurals name="quick_settings_internet_hotspot_summary_num_devices">
         <item quantity="one">%d device connected</item>
         <item quantity="few">%d devices connected</item>
-        <item quantity="other">%d devices connected</item>
+        <item quantity="other">%d dispozitive conectate</item>
     </plurals>
     <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
     <string name="screenrecord_delete_label">Șterge</string>
     <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
-    <string name="screenrecord_delete_description">Screen recording deleted</string>
+    <string name="screenrecord_delete_description">Înregistrare de ecran ștearsă</string>
     <!-- Screen record -->
-    <string name="screenrecord_stopdot_label">Show stop dot</string>
-    <string name="screenrecord_stopdot_summary">Longpress to move it</string>
-    <string name="screenrecord_lowquality_label">Lower quality</string>
-    <string name="screenrecord_lowquality_summary">For smaller file size</string>
-    <string name="screenrecord_longer_timeout_switch_label">Bigger file size limit</string>
-    <string name="screenrecord_longer_timeout_switch_summary">Limit recording size to 15 GB</string>
-    <string name="screenrecord_skip_time_label">Skip timer</string>
-    <string name="screenrecord_skip_time_summary">Remove 3 second wait</string>
-    <string name="screenrecord_hevc_switch_label">Enable HEVC</string>
+    <string name="screenrecord_stopdot_label">Afișare punct stop</string>
+    <string name="screenrecord_stopdot_summary">Apăsați lung pentru a-l muta</string>
+    <string name="screenrecord_lowquality_label">Calitate scăzută</string>
+    <string name="screenrecord_lowquality_summary">Pentru o dimensiune mai mică a fișierului</string>
+    <string name="screenrecord_longer_timeout_switch_label">Limită mai mare a fișierului</string>
+    <string name="screenrecord_longer_timeout_switch_summary">Limitează dimensiunea înregistrării la 15 GB</string>
+    <string name="screenrecord_skip_time_label">Omite cronometrul</string>
+    <string name="screenrecord_skip_time_summary">Elimină cele 3 secunde de așteptare</string>
+    <string name="screenrecord_hevc_switch_label">Activare HEVC</string>
 </resources>

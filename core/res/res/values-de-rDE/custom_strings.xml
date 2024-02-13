@@ -63,8 +63,8 @@
     <string name="charging_control_notification_content_target_reached">Akku ist geladen</string>
     <!-- PowerOffAlarmService -->
     <string name="notification_channel_poweroff_alarm">Wecker ausschalten</string>
-    <string name="poweroff_alarm_title">Power off alarm set</string>
-    <string name="poweroff_alarm_body">An alarm was detected. You can turn off your phone and it\'ll power on 2 minutes before it\'s due</string>
+    <string name="poweroff_alarm_title">Alarm bei ausgeschaltetem Gerät aktiv</string>
+    <string name="poweroff_alarm_body">Ein Alarm wurde erkannt. Du kannst dein Gerät ausschalten und das Gerät schaltet 2 Minuten vor Fälligkeit ein</string>
     <!-- Pocket Lock -->
     <string name="pocket_lock_message_long_press">Zum Entsperren Ein-/Aus-Taste gedrückt halten</string>
 </resources>

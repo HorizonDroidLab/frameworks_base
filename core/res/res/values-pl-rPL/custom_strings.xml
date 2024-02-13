@@ -17,9 +17,9 @@
 <resources>
     <!-- Advanced reboot -->
     <string name="reboot_to_recovery_title">Tryb recovery</string>
-    <string name="reboot_to_recovery_message">Ponowne uruchamianie w Trybie Odzyskiwania</string>
+    <string name="reboot_to_recovery_message">Uruchamiam ponownie do trybu recovery</string>
     <string name="reboot_to_bootloader_title">Restart do trybu bootloader\'a</string>
-    <string name="reboot_to_bootloader_message">Ponowne uruchamianie w Trybie Bootloader\'a</string>
+    <string name="reboot_to_bootloader_message">Uruchamiam ponownie do trybu bootloader</string>
     <string name="reboot_title">Uruchom ponownie</string>
     <string name="reboot_message">Ponowne uruchamianie</string>
     <!-- Alert slider proc nodes paths. -->

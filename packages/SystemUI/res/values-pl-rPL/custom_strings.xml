@@ -15,15 +15,15 @@
     <!-- Advanced Reboot -->
     <string name="global_action_restart_advanced">Zaawansowane</string>
     <string name="global_action_restart_recovery">Tryb recovery</string>
-    <string name="global_action_restart_bootloader">Restart do trybu bootloader\'a</string>
-    <string name="global_action_restart_ui">Zresetuj Interfejs</string>
+    <string name="global_action_restart_bootloader">Restart do trybu bootloader</string>
+    <string name="global_action_restart_ui">Zrestartuj Interfejs</string>
     <!-- Text while recognizing face -->
     <string name="face_unlock_recognizing">Rozpoznawanie twarzy...</string>
     <!-- Custom QS tiles -->
     <!-- Ambient display QS tile -->
     <string name="quick_settings_ambient_display_label">Ekran dostosowany do otoczenia</string>
-    <string name="accessibility_quick_settings_ambient_display_off">Ekran dostosowany do otoczenia wyłączony</string>
-    <string name="accessibility_quick_settings_ambient_display_on">Ekran dostosowany do otoczenia włączony.</string>
+    <string name="accessibility_quick_settings_ambient_display_off">Wył. ekran dostosowany do otoczenia.</string>
+    <string name="accessibility_quick_settings_ambient_display_on">Wł. ekran dostosowany do otoczenia.</string>
     <!-- AOD QS tile -->
     <string name="quick_settings_aod_label">Ekran Zawsze włączony</string>
     <string name="quick_settings_aod_off_powersave_label">AOD wyłączony\nOszczędzanie baterii</string>
@@ -33,8 +33,8 @@
     <string name="accessibility_quick_settings_caffeine_on">Caffeine wł.</string>
     <!-- Heads up QS tile -->
     <string name="quick_settings_heads_up_label">Wyskakujące powiadomienia</string>
-    <string name="accessibility_quick_settings_heads_up_off">Wył wyskakujące powiadomienia.</string>
-    <string name="accessibility_quick_settings_heads_up_on">Wł wyskakujące powiadomienia.</string>
+    <string name="accessibility_quick_settings_heads_up_off">Wył. wyskakujące powiadomienia.</string>
+    <string name="accessibility_quick_settings_heads_up_on">Wł. wyskakujące powiadomienia.</string>
     <!-- Sync QS tile -->
     <string name="quick_settings_sync_label">Synchronizacja</string>
     <string name="accessibility_quick_settings_sync_off">Synchronizacja wył.</string>
@@ -50,7 +50,7 @@
     <string name="vpn_credentials_dialog_connect">Połącz</string>
     <!-- DataSwitch Tile -->
     <string name="qs_data_switch_label">Przełącz kartę odpowiedzialną za transmisję danych</string>
-    <string name="qs_data_switch_toast_0">Nie wykryto żadnej karty SIM</string>
+    <string name="qs_data_switch_toast_0">Obecnie nie wykryto żadnej karty SIM</string>
     <string name="qs_data_switch_toast_1">Obecnie tylko jedna karta SIM została włożona</string>
     <string name="qs_data_switch_text_1">SIM 1</string>
     <string name="qs_data_switch_text_2">SIM 2</string>
@@ -88,7 +88,7 @@
     <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
     <string name="screenrecord_delete_label">Usuń</string>
     <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
-    <string name="screenrecord_delete_description">Nagrywanie ekranu zostało usunięte</string>
+    <string name="screenrecord_delete_description">Nagranie ekranu zostało usunięte</string>
     <!-- Screen record -->
     <string name="screenrecord_stopdot_label">Pokaż kropkę do zatrzymania</string>
     <string name="screenrecord_stopdot_summary">Przytrzymaj, aby przenieść</string>

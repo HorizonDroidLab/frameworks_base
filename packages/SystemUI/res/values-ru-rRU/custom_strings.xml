@@ -18,7 +18,7 @@
     <string name="global_action_restart_bootloader">Bootloader</string>
     <string name="global_action_restart_ui">Интерфейс</string>
     <!-- Text while recognizing face -->
-    <string name="face_unlock_recognizing">Recognizing face...</string>
+    <string name="face_unlock_recognizing">Распознавание лица...</string>
     <!-- Custom QS tiles -->
     <!-- Ambient display QS tile -->
     <string name="quick_settings_ambient_display_label">Ambient Display</string>
@@ -77,26 +77,26 @@
     <!-- Bluetooth dialog -->
     <string name="turn_on_bluetooth">Использовать Bluetooth</string>
     <string name="bluetooth_is_off">Bluetooth выключен</string>
-    <string name="tap_a_device_to_connect">Tap to connect or disconnect a device</string>
+    <string name="tap_a_device_to_connect">Нажмите, чтобы подключить или отключить устройство</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
     <plurals name="quick_settings_internet_hotspot_summary_num_devices">
-        <item quantity="one">%d device connected</item>
-        <item quantity="few">%d devices connected</item>
-        <item quantity="many">%d devices connected</item>
-        <item quantity="other">%d devices connected</item>
+        <item quantity="one">%d устройство подключено</item>
+        <item quantity="few">%d устройств подключено</item>
+        <item quantity="many">%d устройств подключено</item>
+        <item quantity="other">%d устройств подключено</item>
     </plurals>
     <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
     <string name="screenrecord_delete_label">Удалить</string>
     <!-- A toast message shown after successfully deleting a screen recording [CHAR LIMIT=NONE] -->
-    <string name="screenrecord_delete_description">Screen recording deleted</string>
+    <string name="screenrecord_delete_description">Запись экрана удалена</string>
     <!-- Screen record -->
-    <string name="screenrecord_stopdot_label">Show stop dot</string>
-    <string name="screenrecord_stopdot_summary">Longpress to move it</string>
-    <string name="screenrecord_lowquality_label">Lower quality</string>
-    <string name="screenrecord_lowquality_summary">For smaller file size</string>
-    <string name="screenrecord_longer_timeout_switch_label">Bigger file size limit</string>
-    <string name="screenrecord_longer_timeout_switch_summary">Limit recording size to 15 GB</string>
-    <string name="screenrecord_skip_time_label">Skip timer</string>
-    <string name="screenrecord_skip_time_summary">Remove 3 second wait</string>
-    <string name="screenrecord_hevc_switch_label">Enable HEVC</string>
+    <string name="screenrecord_stopdot_label">Показывать кнопку остановки</string>
+    <string name="screenrecord_stopdot_summary">Удерживайте для перемещения</string>
+    <string name="screenrecord_lowquality_label">Низкое качество</string>
+    <string name="screenrecord_lowquality_summary">Для меньшего размера файла</string>
+    <string name="screenrecord_longer_timeout_switch_label">Лимит размера файла</string>
+    <string name="screenrecord_longer_timeout_switch_summary">Ограничить размер записи до 15 Гб</string>
+    <string name="screenrecord_skip_time_label">Пропустить таймер</string>
+    <string name="screenrecord_skip_time_summary">Убрать 3-х секундное ожидание</string>
+    <string name="screenrecord_hevc_switch_label">Включить HEVC</string>
 </resources>

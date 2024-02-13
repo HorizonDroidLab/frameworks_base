@@ -80,10 +80,10 @@
     <string name="tap_a_device_to_connect">Торкніться, щоб під\'єднатися чи від\'єднати пристрій</string>
     <!-- QuickSettings: InternetDialog: Summary for how many devices are connected to the hotspot [CHAR LIMIT=NONE] -->
     <plurals name="quick_settings_internet_hotspot_summary_num_devices">
-        <item quantity="one">%d пристрій під\'єднано</item>
-        <item quantity="few">%d пристрій під’єднано</item>
-        <item quantity="many">%d devices connected</item>
-        <item quantity="other">%d devices connected</item>
+        <item quantity="one">%d пристрій підключено</item>
+        <item quantity="few">%d пристроїв під’єднано</item>
+        <item quantity="many">%d пристроїв підключено</item>
+        <item quantity="other">%d пристроїв підключено</item>
     </plurals>
     <!-- Label for notification action to delete a screen recording file [CHAR LIMIT=35] -->
     <string name="screenrecord_delete_label">Видалити</string>
