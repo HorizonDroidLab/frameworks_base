@@ -67,21 +67,6 @@
     <string name="qs_data_switch_changed_1">Switch data card to SIM 1.</string>
     <string name="qs_data_switch_changed_2">Switch data card to SIM 2.</string>
 
-    <!-- Title of statusbar tuner -->
-    <string name="status_bar_icons">Status bar icons</string>
-
-    <!-- Name of the VPN status bar icon. -->
-    <string name="status_bar_vpn">VPN</string>
-
-     <!-- Name of the data saver status bar icon. -->
-     <string name="status_bar_data_saver">Data saver</string>
-
-    <!-- Name of the location status bar icon. -->
-    <string name="status_bar_location">Location</string>
-
-    <!-- Name of the microphone status bar icon. -->
-    <string name="status_bar_microphone">Microphone</string>
-
     <!-- Reader mode QS tile -->
     <string name="quick_settings_reading_mode">Reading mode</string>
     <string name="accessibility_quick_settings_reading_mode_on">Reading mode on.</string>
