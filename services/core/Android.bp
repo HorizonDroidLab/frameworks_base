@@ -187,7 +187,6 @@ java_library_static {
         "com.android.sysprop.watchdog",
         "ImmutabilityAnnotation",
         "securebox",
-        "vendor.aac.hardware.richtap.vibrator",
         "vendor.aospa.biometrics.face",
     ],
     javac_shard_size: 50,
