@@ -25,7 +25,6 @@ import com.android.systemui.qs.tiles.CellularTile
 import com.android.systemui.qs.tiles.FPSInfoTile
 import com.android.systemui.qs.tiles.HeadsUpTile
 import com.android.systemui.qs.tiles.OnTheGoTile
-import com.android.systemui.qs.tiles.ScreenshotTile
 import com.android.systemui.qs.tiles.RefreshRateTile
 import com.android.systemui.qs.tiles.SyncTile
 import com.android.systemui.qs.tiles.UsbTetherTile
@@ -88,12 +87,6 @@ interface CustomModule {
     @IntoMap
     @StringKey(OnTheGoTile.TILE_SPEC)
     fun bindOnTheGoTile(onTheGoTile: OnTheGoTile): QSTileImpl<*>
-
-    /** Inject ScreenshotTile into tileMap in QSModule */
-    @Binds
-    @IntoMap
-    @StringKey(ScreenshotTile.TILE_SPEC)
-    fun bindScreenshotTile(screenshotTile: ScreenshotTile): QSTileImpl<*>
 
     /** Inject RefreshRateTile into tileMap in QSModule */
     @Binds
