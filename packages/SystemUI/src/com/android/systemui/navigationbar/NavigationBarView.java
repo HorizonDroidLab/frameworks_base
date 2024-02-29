@@ -180,6 +180,10 @@ public class NavigationBarView extends FrameLayout {
     private boolean mShowSwipeUpUi;
     private UpdateActiveTouchRegionsCallback mUpdateActiveTouchRegionsCallback;
 
+    private boolean mBlockedGesturalNavigation;
+    private boolean mShowCursorKeys;
+    private boolean mImeVisible;
+
     private int mBasePaddingBottom;
     private int mBasePaddingLeft;
     private int mBasePaddingRight;
@@ -629,6 +633,11 @@ public class NavigationBarView extends FrameLayout {
         getBackButton().setImageDrawable(backIcon);
 
         updateRecentsIcon();
+
+        final boolean hideIMESpace = isHideIMESpaceEnabled();
+        boolean disableCursorKeys = !mShowCursorKeys || !useAltBack ||
+                (QuickStepContract.isGesturalMode(mNavBarMode) && mImeVisible);
+
 
         // Update IME button visibility, a11y and rotate button always overrides the appearance
         boolean disableImeSwitcher =
@@ -1268,7 +1277,7 @@ public class NavigationBarView extends FrameLayout {
     }
 
     public boolean isHideIMESpaceEnabled() {
-        return Settings.System.getIntForUser(getContext().getContentResolver(),
-                     Settings.System.HIDE_IME_SPACE_ENABLE , 0, UserHandle.USER_CURRENT) != 0;
+        return android.provider.Settings.Global.(getContext().getContentResolver(),
+                     android.provider.Settings.Global.HIDE_IME_SPACE_ENABLE , 0, UserHandle.USER_CURRENT) != 0;
     }
 }
