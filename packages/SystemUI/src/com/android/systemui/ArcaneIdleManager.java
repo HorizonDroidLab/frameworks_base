@@ -112,7 +112,7 @@ public class ArcaneIdleManager {
         RunningServices = localActivityManager.getRunningAppProcesses();
         for (int i=0; i < RunningServices.size(); i++) {
           if (!RunningServices.get(i).pkgList[0].toString().contains(".android") &&
-          	!RunningServices.get(i).pkgList[0].toString().equals("android") &&
+          	    !RunningServices.get(i).pkgList[0].toString().equals("android") &&
                 !RunningServices.get(i).pkgList[0].toString().contains(".google") &&
                 !RunningServices.get(i).pkgList[0].toString().contains(".mgoogle") &&
                 !RunningServices.get(i).pkgList[0].toString().contains(".facebook") &&
@@ -120,8 +120,7 @@ public class ArcaneIdleManager {
                 !RunningServices.get(i).pkgList[0].toString().contains(".ugc") &&
                 !RunningServices.get(i).pkgList[0].toString().contains("gms") &&
                 !RunningServices.get(i).pkgList[0].toString().contains(".settings") &&
-                !RunningServices.get(i).pkgList[0].toString().contains(".GoogleCamera") &&
-                !RunningServices.get(i).pkgList[0].toString().contains(".ims")) {
+                !RunningServices.get(i).pkgList[0].toString().contains(".GoogleCamera")) {
                     localActivityManager.killBackgroundProcesses(RunningServices.get(i).pkgList[0].toString());
             }
         }
