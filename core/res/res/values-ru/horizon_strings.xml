@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 BananaDroid
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- SystemUI Restart -->
+    <string name="systemui_restart_title">Требуется перезапуск SystemUI</string>
+    <string name="systemui_restart_message">Чтобы все изменения вступили в силу, необходимо перезапустить SystemUI. Перезапустить SystemUI сейчас?</string>
+
+    <!-- Settings Restart -->
+    <string name="settings_restart_title">Требуется перезапуск настроек</string>
+    <string name="settings_restart_message">Чтобы все изменения вступили в силу, необходимо перезапустить приложение "Настройки". Перезапустить приложение "Настройки" сейчас?</string>
+</resources>
